@@ -1,0 +1,13 @@
+
+*.dSYM
+*.exe
+*.ilk
+*.out
+*.pdb
+*.png
+*.txt
+
+.vscode/
+build/
+data/
+plots/
