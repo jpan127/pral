@@ -1,0 +1,15 @@
+!**/CMakeLists.txt
+
+*.ilk
+*.pdb
+*.exe
+*.out
+*.dSYM
+*.png
+
+sim1
+
+build/
+data/
+plots/
+.vscode/
