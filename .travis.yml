@@ -1,0 +1,27 @@
+os: linux
+dist: xenial
+language: cpp
+
+matrix:
+  fast_finish: true
+  include:
+    - compiler: clang
+      addons:
+        apt:
+          sources:
+            - llvm-toolchain-xenial-8
+            - ubuntu-toolchain-r-test
+          packages:
+            - clang++-8
+            - libc++-8-dev
+            - libc++abi-8-dev
+            - clang-tidy-8
+      env:
+        - MATRIX_EVAL="export CXX=/usr/bin/clang++-8 && export CLANG_TIDY=/usr/bin/clang-tidy-8 && export STDLIB=-stdlib=libc++"
+
+before_install:
+  - chmod +x build.bash
+  - eval "${MATRIX_EVAL}"
+
+script:
+  - ./build.bash
