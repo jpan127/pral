@@ -7,7 +7,7 @@
 *.dSYM
 *.png
 
-sim1
+/core
 
 build/
 data/

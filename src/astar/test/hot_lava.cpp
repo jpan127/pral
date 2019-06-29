@@ -3,7 +3,6 @@
 #include "catch.hpp"
 
 #include <array>
-#include <iostream>
 
 using namespace jp::astar;
 
