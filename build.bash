@@ -33,14 +33,24 @@ echo "--------------------"
 #     Run Tests    #
 ####################
 set +e
-./build/src/astar/hot_lava $1 2>/dev/null 1>/dev/null
 
-# If it failed, then rerun with stdout stderr
-return_value=$?
-if [ $return_value != "0" ]; then
-    ./build/src/astar/hot_lava $1
-    exit 1
-fi
+declare -a TESTS=(
+    "./build/src/common/common_tests"
+    "./build/src/astar/hot_lava"
+    "./build/src/particle_filter/particle_filter_tests"
+)
+
+for test in "${TESTS[@]}"; do
+    echo "Running : $test"
+    $test $1 2>/dev/null 1>/dev/null
+
+    # If it failed, then rerun with stdout stderr
+    return_value=$?
+    if [ $return_value != "0" ]; then
+        $test $1
+        exit 1
+    fi
+done
 
 echo "--------------------"
 echo "| Tests Successful |"
