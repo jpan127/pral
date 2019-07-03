@@ -7,7 +7,7 @@
 #include <utility>
 #include <vector>
 
-namespace jp {
+namespace pral {
 
 template <typename T, typename Distribution, size_t Samples = 1>
 class Sampler {
@@ -139,4 +139,4 @@ void resampling_in_place(std::array<size_t, N> &indices, std::array<T, N> &conta
     }
 }
 
-} // namespace jp
+} // namespace pral

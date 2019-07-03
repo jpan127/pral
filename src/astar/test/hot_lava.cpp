@@ -4,7 +4,7 @@
 
 #include <array>
 
-using namespace jp::astar;
+using namespace pral;
 
 constexpr bool LAVA = false;
 constexpr uint8_t kMapDimension = 10;

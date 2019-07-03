@@ -8,7 +8,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace jp::astar {
+namespace pral {
 
 template <typename NodeType, typename LinkType>
 class AStarGraph {
@@ -119,4 +119,4 @@ class AStarGraph {
     }
 };
 
-} // namespace jp::astar
+} // namespace pral

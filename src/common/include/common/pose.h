@@ -4,7 +4,7 @@
 
 #include <cmath>
 
-namespace jp {
+namespace pral {
 
 struct Pose {
     double x = 0;
@@ -17,4 +17,4 @@ inline double truncate_radians(const double degrees) {
     return (modulo < 0) ? modulo + k2Pi : modulo;
 }
 
-} // namespace jp
+} // namespace pral

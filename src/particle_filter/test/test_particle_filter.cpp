@@ -4,8 +4,7 @@
 
 #include <fstream>
 
-using namespace jp;
-using namespace jp::particle_filter;
+using namespace pral;
 
 constexpr size_t kNumParticles = 1000;
 constexpr size_t kNumMeasurements = 4;
