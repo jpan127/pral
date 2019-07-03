@@ -3,7 +3,7 @@
 #include <limits>
 #include <unordered_set>
 
-namespace jp::astar {
+namespace pral {
 
 template <typename DataType>
 struct AStarNode {
@@ -27,4 +27,4 @@ struct AStarLink {
     } nodes;
 };
 
-} // namespace jp::astar
+} // namespace pral

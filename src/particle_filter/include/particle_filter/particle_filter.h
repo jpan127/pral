@@ -11,7 +11,7 @@
 #include <cstdint>
 #include <numeric>
 
-namespace jp::particle_filter {
+namespace pral {
 
 template <size_t NumParticles, size_t NumMeasurements>
 class ParticleFilter {
@@ -178,4 +178,4 @@ class ParticleFilter {
     }
 };
 
-} // namespace jp::particle_filter
+} // namespace pral

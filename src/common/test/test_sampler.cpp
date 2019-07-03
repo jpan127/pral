@@ -2,7 +2,7 @@
 
 #include "common/sampler.h"
 
-using namespace jp;
+using namespace pral;
 
 constexpr size_t kNumSamples = 100;
 

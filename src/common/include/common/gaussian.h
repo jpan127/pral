@@ -7,7 +7,7 @@
 #include <numeric>
 #include <random>
 
-namespace jp {
+namespace pral {
 
 class Gaussian : public Sampler<double, std::normal_distribution<double>, 1> {
   public:
@@ -31,4 +31,4 @@ inline double univariate_gausian_pdf(const double value, const double mean, cons
     return normalizing_constant * e_exponent;
 }
 
-} // namespace jp
+} // namespace pral
