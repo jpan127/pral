@@ -35,8 +35,9 @@ echo "--------------------"
 set +e
 
 declare -a TESTS=(
-    "./build/src/common/common_tests"
     "./build/src/astar/astar_tests"
+    "./build/src/common/common_tests"
+    "./build/src/kd_tree/kd_tree_tests"
     "./build/src/particle_filter/particle_filter_tests"
 )
 
