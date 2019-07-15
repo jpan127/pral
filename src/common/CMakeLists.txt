@@ -10,9 +10,15 @@ include_directories(
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -Wextra $ENV{STDLIB}")
 
+# Shared library
+add_library(common SHARED
+    src/plog.cpp
+)
+
 # Tests
 file(GLOB SOURCES "test/*.cpp")
 add_executable(common_tests ${SOURCES})
+target_link_libraries(common_tests common)
 target_include_directories(common_tests PUBLIC
     ${PROJECT_SOURCE_DIR}/modules/catch2
     ${CMAKE_CURRENT_SOURCE_DIR}/test
